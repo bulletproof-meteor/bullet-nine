@@ -1,3 +1,3 @@
-Accounts.validateNewUser(function (user) {
+// Accounts.validateNewUser(function (user) {
 
-});
+// });

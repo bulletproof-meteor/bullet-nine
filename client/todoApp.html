@@ -1,6 +1,14 @@
 <body>
   {{> navigation}}
-  {{> main}}
+  {{#if currentUser}}
+    {{> main}}
+
+  {{else}}
+    <div class="container" >
+      <p> please signin/create account to continue</p>
+    </div>
+  {{/if}}
+
 </body>
 
 <template name="main">
