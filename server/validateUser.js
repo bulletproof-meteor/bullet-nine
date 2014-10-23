@@ -1,3 +1,0 @@
-// Accounts.validateNewUser(function (user) {
-
-// });

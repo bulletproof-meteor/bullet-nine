@@ -1,5 +1,5 @@
 Todos = new Meteor.Collection('todos');
-InvitedUsers = new Meteor.Collection('invitedUsers')
+
 Todos.allow({
   remove: function() { return true; },
   update: function() { return true; }
