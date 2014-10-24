@@ -3,6 +3,24 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    var loginState = getCookie('myapp-login-state');
+    if(loginState) {
+      loginState = JSON.parse(decodeURIComponent(loginState));
+      $(function() {
+        $('#login-state')
+          .text('Open Meteor App')
+          .attr('href', loginState.url);
+      });
+    }
+
+  </script>
 </head>
 
 <body>
